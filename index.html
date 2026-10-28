@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na blízku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Na blízku</h1>
+    <p>Všetko, čo potrebuješ, nájdeš blízko seba.</p>
+
+    <h2>Čo hľadáš?</h2>
+    
+    <input
+        type="text"
+        id="hladanie"
+        placeholder="Hľadaj reštaurácie, kaderníctva, služby..."
+    >
+    <button onclick="hladaj()">Hľadať</button>
+
+    <p id="vysledok"></p>
+
+
+    <div class="kategorie">
+        <button>🍕 Reštaurácie</button>
+        <button>🔧 Služby</button>
+        <button>🛍️ Obchody</button>
+    </div>
+    
+    
+<script>
+    function hladaj() {
+        const hladanyText = document.getElementById("hladanie").value.trim();
+        const vysledok = document.getElementById("vysledok");
+
+        if (hladanyText === "") {
+            vysledok.textContent = "Najprv napíš, čo hľadáš.";
+        } else {
+            vysledok.textContent = "Hľadáš: " + hladanyText +
+                ". Čoskoro tu nájdeš podniky v okolí!";
+        }
+    }
+</script>
+
+</body>
+</html>
